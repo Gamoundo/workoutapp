@@ -8,4 +8,4 @@ function Routines(){
     )
 }
 
-export default Routines
+export default Routines;
