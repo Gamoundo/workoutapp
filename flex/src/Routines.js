@@ -56,14 +56,15 @@ function Routines(){
 ]
     
 const displayRoutines = (arr) => {
-  arr.map((obj) => {
+ return (arr.map((obj) => {
       return(
-          <div>
+          <div className='left'>
               <h3>{obj.name}</h3>
               <p>{obj.type}</p>
           </div>
       )
   })
+ )
 }
 
 

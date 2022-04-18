@@ -1,5 +1,14 @@
+body {
+  background-color: blueviolet;
+}
+
 .App {
   text-align: center;
+  background-color: blanchedalmond;
+}
+
+.left {
+  text-align: left;
 }
 
 .App-logo {
