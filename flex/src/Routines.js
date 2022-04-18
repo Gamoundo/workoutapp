@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react';
+
 
 function Routines(){
+
+const [x, setx] = useState("")
 
     const sampleRoutines = [{
         name: "Incredibly Bald",
@@ -18,7 +21,7 @@ function Routines(){
                 pic: "pic of squats"
             },
             {
-                name: "Pushups",
+                name: "Running",
                 quantity: "6 miles",
                 desc: "good luck",
                 pic: "pic of running"
@@ -54,11 +57,31 @@ function Routines(){
     },
 
 ]
+
+const displayEx = (arr2) => {
+    return (arr2.map((obj) => {
+        return(
+            <div className='left'>
+                <h3>{obj.name}</h3>
+                <p>{obj.pic}</p>
+                <p>{obj.quantity}</p>
+                <p>{obj.desc}</p>
+                
+            </div>
+        )
+    })
+   )
+ }
     
 const displayRoutines = (arr) => {
- return (arr.map((obj) => {
+ 
+ 
+    return (arr.map((obj) => {
+        const seeEx = () => {
+           setx(obj.exercises)
+          }
       return(
-          <div className='left'>
+          <div className='left' onClick={seeEx}>
               <h3>{obj.name}</h3>
               <p>{obj.type}</p>
           </div>
@@ -71,7 +94,16 @@ const displayRoutines = (arr) => {
     return(
         <div>
             <h1>Routines go here</h1>
-            {displayRoutines(sampleRoutines)}
+            <div className='twodivs'>
+                <div>
+                {displayRoutines(sampleRoutines)}
+                </div>
+            
+            <div>
+             {x !== "" && displayEx(x)}
+            </div>
+            </div>
+            
         </div>
     )
 }

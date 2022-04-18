@@ -6,6 +6,11 @@ body {
   text-align: center;
   background-color: blanchedalmond;
 }
+.twodivs {
+  display: flex; 
+  flex-direction: row;
+  padding: 3rem 3rem;
+}
 
 .left {
   text-align: left;
