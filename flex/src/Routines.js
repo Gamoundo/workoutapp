@@ -61,7 +61,7 @@ const [x, setx] = useState("")
 const displayEx = (arr2) => {
     return (arr2.map((obj) => {
         return(
-            <div className='left'>
+            <div className='excard'>
                 <h3>{obj.name}</h3>
                 <p>{obj.pic}</p>
                 <p>{obj.quantity}</p>
@@ -99,7 +99,7 @@ const displayRoutines = (arr) => {
                 {displayRoutines(sampleRoutines)}
                 </div>
             
-            <div>
+            <div className='right'>
              {x !== "" && displayEx(x)}
             </div>
             </div>
